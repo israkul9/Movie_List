@@ -107,6 +107,9 @@
 		38728D2C2B0E7E2F0047BC9A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5100F60C2B0E138C006E4DAD /* LaunchScreen.storyboard */,
+				5100F60A2B0E138C006E4DAD /* Assets.xcassets */,
+				5100F6002B0E138A006E4DAD /* SceneDelegate.swift */,
 				5100F5FE2B0E138A006E4DAD /* AppDelegate.swift */,
 			);
 			path = App;
@@ -152,18 +155,12 @@
 		5100F5FD2B0E138A006E4DAD /* Movie_List_App */ = {
 			isa = PBXGroup;
 			children = (
+				51A693472B0F0E890083E032 /* MovieList */,
 				38728D2C2B0E7E2F0047BC9A /* App */,
 				5100F6402B0E154B006E4DAD /* Utility */,
 				38E40E562B0E2CB100D24166 /* Extension */,
 				5100F64C2B0E17B4006E4DAD /* Service Manager */,
-				5100F63A2B0E154B006E4DAD /* Controllers */,
 				5100F63E2B0E154B006E4DAD /* Common */,
-				5100F6422B0E154B006E4DAD /* Models */,
-				5100F6382B0E154B006E4DAD /* ViewModels */,
-				5100F6342B0E154B006E4DAD /* Views */,
-				5100F6002B0E138A006E4DAD /* SceneDelegate.swift */,
-				5100F60A2B0E138C006E4DAD /* Assets.xcassets */,
-				5100F60C2B0E138C006E4DAD /* LaunchScreen.storyboard */,
 				5100F60F2B0E138C006E4DAD /* Info.plist */,
 				5100F6072B0E138A006E4DAD /* Movie_List_App.xcdatamodeld */,
 			);
@@ -190,6 +187,7 @@
 		5100F6342B0E154B006E4DAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5100F63A2B0E154B006E4DAD /* Controllers */,
 				38E40E552B0E2C2C00D24166 /* MovieCell */,
 				5100F6352B0E154B006E4DAD /* Storyboards */,
 			);
@@ -251,6 +249,16 @@
 				5100F64D2B0E1825006E4DAD /* APIManager.swift */,
 			);
 			path = "Service Manager";
+			sourceTree = "<group>";
+		};
+		51A693472B0F0E890083E032 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				5100F6422B0E154B006E4DAD /* Models */,
+				5100F6342B0E154B006E4DAD /* Views */,
+				5100F6382B0E154B006E4DAD /* ViewModels */,
+			);
+			path = MovieList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
