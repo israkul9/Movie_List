@@ -57,6 +57,7 @@ class MovieListVC: UIViewController, UISearchResultsUpdating  {
 }
 
 extension MovieListVC {
+    // MARK: Get Data from API
     func getdata(){
         movieListViewModel = MovieListViewModel()
         self.movieListViewModel.fetchMoviesFromServer { success in
@@ -163,9 +164,8 @@ extension MovieListVC : UITableViewDelegate , UITableViewDataSource {
         PrintUtility.printLog(tag: TAG, text: imageUrl)
     }
     
+    /// - Parameter searchText: text which is searched in search bar
     /// Filter movie from movie list
-        /// - Parameter searchText: text searched in search bar
-   
     func filterMovies(searchText: String) {
         guard let movies = movieListViewModel?.movieList else { return }
         if searchText.isEmpty {

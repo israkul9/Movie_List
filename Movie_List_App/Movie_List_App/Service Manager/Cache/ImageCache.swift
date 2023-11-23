@@ -17,6 +17,7 @@ class ImageCache {
         let urlString = url.absoluteString
         if let cachedImage = cachedImage.object(forKey: urlString as AnyObject) as? UIImage {
             // if image already cached
+            PrintUtility.printLog(tag: "ImageCache : ", text: "Image from cache")
             completion(.success(cachedImage))
             return
         }
@@ -30,6 +31,7 @@ class ImageCache {
                 DispatchQueue.main.async {
                     // Update the completion handler on the main thread
                         completion(.success(image))
+                    PrintUtility.printLog(tag: "ImageCache : ", text: "Image from server")
                 }
             } catch {
                 print(error.localizedDescription)
