@@ -120,7 +120,6 @@ extension MovieListVC {
         self.movieListTableView.delegate = self
         self.movieListTableView.dataSource = self
         self.movieListTableView.register(UINib(nibName: MovieCell.className, bundle: nil), forCellReuseIdentifier: MovieCell.className)
-        self.movieListTableView.estimatedRowHeight = 120.0
         self.movieListTableView.estimatedRowHeight = UITableView.automaticDimension
     }
     func setupNavbar(){
