@@ -38,11 +38,16 @@ class MovieListVC: UIViewController, UISearchResultsUpdating  {
     override func viewDidLoad() {
         super.viewDidLoad()
         PrintUtility.printLog(tag: self.TAG, text: "viewDidLoad")
+        self.setupNavbar()
         self.setupSearchBar()
         self.enableLightMode()
         self.setupTableView()
         self.subscribeKeyboardShowAndHide()
         self.getdata()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        PrintUtility.printLog(tag: self.TAG, text: "viewWillAppear")
     }
     
     deinit {
@@ -83,23 +88,21 @@ extension MovieListVC {
             // You can use keyboardFrame to get the keyboard's size and position
             PrintUtility.printLog(tag: TAG, text: "Keyboard will show. Frame: \(keyboardFrame)")
             
-            UIView.animate(withDuration: 0.1) {
+            UIView.animate(withDuration: 0.2) {
                 self.tableViewBottomConst.constant = keyboardFrame.height
+                self.view.layoutIfNeeded()
             }
-            view.layoutIfNeeded()
-            
         }
     }
     
     @objc func keyboardWillHide(notification: Notification) {
         // Perform actions when the keyboard will hide, e.g., restore UI layout
         PrintUtility.printLog(tag: TAG, text: "keyboardWillHide")
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.2) {
             self.tableViewBottomConst.constant = 0.0
+            self.view.layoutIfNeeded()
         }
-        view.layoutIfNeeded()
     }
-    
     
     func setupSearchBar(){
         // Configure the search controller
@@ -113,14 +116,13 @@ extension MovieListVC {
     }
     
     func setupTableView(){
-        
         self.movieListTableView.delegate = self
         self.movieListTableView.dataSource = self
         self.movieListTableView.register(UINib(nibName: MovieCell.className, bundle: nil), forCellReuseIdentifier: MovieCell.className)
         self.movieListTableView.estimatedRowHeight = 120.0
         self.movieListTableView.estimatedRowHeight = UITableView.automaticDimension
     }
-    func enableLightMode(){
+    func setupNavbar(){
         if let navigationController = self.navigationController {
             let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
             navigationController.navigationBar.titleTextAttributes = textAttributes
@@ -131,6 +133,8 @@ extension MovieListVC {
             let largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
             navigationController.navigationBar.largeTitleTextAttributes = largeTitleTextAttributes
         }
+    }
+    func enableLightMode(){
         if #available(iOS 13.0, *) {
             // Set the appearance style to light for this view controller
             overrideUserInterfaceStyle = .light
