@@ -107,8 +107,8 @@
 		38728D2C2B0E7E2F0047BC9A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				51A693482B0F305E0083E032 /* Resources */,
 				5100F60C2B0E138C006E4DAD /* LaunchScreen.storyboard */,
-				5100F60A2B0E138C006E4DAD /* Assets.xcassets */,
 				5100F6002B0E138A006E4DAD /* SceneDelegate.swift */,
 				5100F5FE2B0E138A006E4DAD /* AppDelegate.swift */,
 			);
@@ -259,6 +259,14 @@
 				5100F6382B0E154B006E4DAD /* ViewModels */,
 			);
 			path = MovieList;
+			sourceTree = "<group>";
+		};
+		51A693482B0F305E0083E032 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5100F60A2B0E138C006E4DAD /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
