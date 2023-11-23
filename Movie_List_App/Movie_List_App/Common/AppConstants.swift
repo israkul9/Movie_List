@@ -20,4 +20,15 @@ struct ViewControllerNames {
 struct ApiConstant {
     static let movieListURL = "https://api.themoviedb.org/3/search/movie?api_key=38e61227f85671163c275f9bd95a8803&query=marvel"
     static let posterImageBaseURL = "https://image.tmdb.org/t/p/w500"
+    enum APIRequestType: String {
+        case get
+        case post
+        case put
+        case delete
+        // Add more cases as needed
+
+        var method: String {
+            return self.rawValue.uppercased()
+        }
+    }
 }

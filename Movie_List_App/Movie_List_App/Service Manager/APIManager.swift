@@ -13,7 +13,8 @@ class APIManager {
     private init() {}
     func callMovieListAPI(at url: URL, completion: @escaping (Result<Movies, Error>) -> Void) {
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        let requestType : ApiConstant.APIRequestType = .get
+        request.httpMethod = requestType.method
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))
