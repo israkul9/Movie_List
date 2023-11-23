@@ -20,11 +20,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gem-AD-5Jv" userLabel="CellBaseView">
                         <rect key="frame" x="5" y="5" width="494" height="127"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZlC-Yo-JEF" userLabel="title">
-                                <rect key="frame" x="107" y="5" width="382" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlC-Yo-JEF" userLabel="title">
+                                <rect key="frame" x="107" y="5" width="382" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vJH-i6-W2d"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="aGG-Av-UXZ"/>
                                 </constraints>
+                                <string key="text">Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +39,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssq-25-iAc">
-                                <rect key="frame" x="107" y="45" width="382" height="72"/>
+                                <rect key="frame" x="107" y="62" width="382" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="W3o-EI-01u"/>
                                 </constraints>
@@ -51,12 +54,12 @@
                             <constraint firstItem="ssq-25-iAc" firstAttribute="leading" secondItem="51r-WV-oAE" secondAttribute="trailing" constant="25" id="5ou-WK-A46"/>
                             <constraint firstItem="51r-WV-oAE" firstAttribute="centerY" secondItem="Gem-AD-5Jv" secondAttribute="centerY" id="8V3-9v-Emc"/>
                             <constraint firstAttribute="bottom" secondItem="ssq-25-iAc" secondAttribute="bottom" constant="10" id="9f4-Mx-ql1"/>
-                            <constraint firstAttribute="trailing" secondItem="ZlC-Yo-JEF" secondAttribute="trailing" constant="5" id="TZo-pA-xh6"/>
-                            <constraint firstItem="ZlC-Yo-JEF" firstAttribute="top" secondItem="Gem-AD-5Jv" secondAttribute="top" constant="5" id="axx-8j-WL4"/>
+                            <constraint firstItem="ssq-25-iAc" firstAttribute="top" secondItem="ZlC-Yo-JEF" secondAttribute="bottom" constant="10" id="OZC-DA-351"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlC-Yo-JEF" secondAttribute="trailing" constant="5" id="OyP-gI-Ox6"/>
                             <constraint firstItem="51r-WV-oAE" firstAttribute="leading" secondItem="Gem-AD-5Jv" secondAttribute="leading" constant="5" id="cOC-w9-0WX"/>
-                            <constraint firstItem="ssq-25-iAc" firstAttribute="top" secondItem="ZlC-Yo-JEF" secondAttribute="bottom" constant="10" id="dHi-Iv-RnO"/>
-                            <constraint firstItem="ZlC-Yo-JEF" firstAttribute="leading" secondItem="51r-WV-oAE" secondAttribute="trailing" constant="25" id="eCb-O8-YBV"/>
                             <constraint firstAttribute="trailing" secondItem="ssq-25-iAc" secondAttribute="trailing" constant="5" id="gB5-Uv-e8J"/>
+                            <constraint firstItem="ZlC-Yo-JEF" firstAttribute="top" secondItem="Gem-AD-5Jv" secondAttribute="top" constant="5" id="hyY-Af-Kva"/>
+                            <constraint firstItem="ZlC-Yo-JEF" firstAttribute="leading" secondItem="51r-WV-oAE" secondAttribute="trailing" constant="25" id="lBw-or-Oem"/>
                         </constraints>
                     </view>
                 </subviews>
